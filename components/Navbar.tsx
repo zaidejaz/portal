@@ -2,10 +2,10 @@
 'use client'
 
 import Link from 'next/link'
-import { useSession, signOut } from 'next-auth/react'
+// import { useSession, signOut } from 'next-auth/react'
 
 export default function Navbar() {
-  const { data: session } = useSession()
+  // const { data: session } = useSession()
 
   return (
     <nav className="bg-blue-500 p-4">
@@ -14,7 +14,7 @@ export default function Navbar() {
           Lead Management System
         </Link>
         <div>
-          {session ? (
+          {/* {session ? (
             <>
               <span className="text-white mr-4">Welcome, {session.user?.name}</span>
               <button
@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link href="/auth/signin" className="text-white hover:underline">
               Sign in
             </Link>
-          )}
+          )} */}
         </div>
       </div>
     </nav>

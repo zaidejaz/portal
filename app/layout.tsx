@@ -1,7 +1,7 @@
 // app/layout.tsx
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { getServerSession } from "next-auth/next"
+// import { getServerSession } from "next-auth/next"
 import SessionProvider from "@/components/SessionProvider"
 import Navbar from "@/components/Navbar"
 
@@ -17,15 +17,15 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const session = await getServerSession()
+  // const session = await getServerSession()
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SessionProvider session={session}>
+        {/* <SessionProvider session={session}> */}
           <Navbar />
           {children}
-        </SessionProvider>
+        {/* </SessionProvider> */}
       </body>
     </html>
   )
